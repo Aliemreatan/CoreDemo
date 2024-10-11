@@ -19,7 +19,6 @@ namespace EntityLayer.Concrete
         public bool ContactStatus { get; set; }
 
 
-
-    }
+	}
 
 }
