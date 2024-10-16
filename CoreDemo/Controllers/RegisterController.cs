@@ -23,7 +23,7 @@ namespace CoreDemo.Controllers
 			if (results.IsValid) {
 				p.WriterStatus = true;
 				p.WriterAbout = "Test";
-				wm.WriterAdd(p);
+				wm.TAdd(p);
 				return RedirectToAction("Index", "Blog");
 			}
 			else
