@@ -1,12 +1,16 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoreDemo.Controllers
 {
-	public class NewsLetterController : Controller
+    [AllowAnonymous]
+
+    public class NewsLetterController : Controller
 	{
+
 		NewsLetterManager nm = new NewsLetterManager(new EfNewsLetterRepository());
 		[HttpGet]
 		public PartialViewResult SubscribeMail()

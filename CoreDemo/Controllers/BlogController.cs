@@ -18,17 +18,21 @@ namespace CoreDemo.Controllers
         CategoryManager cm = new CategoryManager(new EfCategoryRepository());
         Context c = new Context();
 
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
             return View(values);
         }
+        [AllowAnonymous]
+
         public IActionResult BlogReadAll(int id)
         {
             ViewBag.i = id;
             var values = bm.GetBlogByID(id);
             return View(values);
         }
+
         public IActionResult BlogListByWriter()
         {
             var usermail = User.Identity.Name;
