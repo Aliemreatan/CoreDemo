@@ -18,7 +18,7 @@ namespace CoreDemo.Areas.Admin.ViewComponents.Statistic
             ViewBag.v2 = c.Contacts.Count();
             ViewBag.v3 = c.Comments.Count();
 
-            //string api = "e2f14ad215e1a199269187fb03315783";
+            //string api = "";
             //string connection = "https://api.openweathermap.org/data/2.5/weather?lat=44.34&lon=10.99&appid=" + api;
 
             //XDocument document = XDocument.Load(connection);
